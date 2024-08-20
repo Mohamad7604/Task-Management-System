@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body id="container">
+    
+    <div class="taskholder">
+        <button id="addbtn" onclick="displayForm()">Add Task</button>
+        <form id="TaskForm" onsubmit="submitform(event)">
+            <!-- Task Name -->
+
+            <span onclick="remove()" class="close">&times;</span>
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" name="taskName" placeholder="type task" required>
+            <br><br>
+    
+            <!-- Task Date -->
+            <label for="taskDate">Date:</label>
+            <input type="date" id="taskDate" name="taskDate"  class="date-input" required>
+            <br><br>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"   required></textarea>
+    
+            <!-- Task Priority -->
+            <label for="taskPriority">Priority:</label>
+            <select id="taskPriority" name="taskPriority" required>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <br><br>
+    
+            <!-- Submit Button -->
+            <button id="submit" type="submit">Add Task</button>
+        </form>
+    </div>
+    <div class="containerofprogress">
+    <div id="progesscontainer">
+        <div class="TODOLIST">
+            <h1>TO-DO-LIST</h1>
+            <hr>
+            <div id="taskcontainer"></div>
+        </div>
+        <div class="TODOLIST">
+            <h1>In Progress</h1>
+            <hr>
+            <ul id="taskcontainer1"></ul>
+        </div>
+        <div class="TODOLIST">
+            <h1>Completed</h1>
+            <hr>
+            <ul id="taskcontainer2"></ul>
+        </div>
+    </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
